@@ -1,9 +1,9 @@
-import NextAuth, { NextAuthOptions } from 'next-auth';
+import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import { db } from '@/src/lib/db';
 import type { User } from 'next-auth';
 
-export const authOptions: NextAuthOptions = {
+export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -11,31 +11,26 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
-
-  session: {
-    strategy: 'jwt', // Evita problemas con sesiones en Vercel
-  },
-
   cookies: {
     sessionToken: {
       name: `__Secure-next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
-        secure: true, // IMPORTANTE en producción
+        secure: true, // importante para producción
       },
     },
   },
-
   callbacks: {
     async signIn({ user }: { user: User }) {
       const [rows] = await db.query('SELECT * FROM users WHERE email = ?', [user.email]);
       if ((rows as any[]).length === 0) {
-        await db.query(
-          'INSERT INTO users (email, name, image) VALUES (?, ?, ?)',
-          [user.email, user.name, user.image]
-        );
+        await db.query('INSERT INTO users (email, name, image) VALUES (?, ?, ?)', [
+          user.email,
+          user.name,
+          user.image,
+        ]);
       }
       return true;
     },
