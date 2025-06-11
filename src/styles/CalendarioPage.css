@@ -1,0 +1,74 @@
+
+body {
+  background-color: #d9d9d9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+
+  color: rgb(0, 0, 0);
+  font-family: 'Anton', sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  color: #000000;
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  color: rgb(0, 0, 0);
+  border: 2px solid #333;
+  border-radius: 16px;
+  font-family: 'Anton', sans-serif;
+  padding: 1rem;
+ 
+}
+
+.react-calendar__tile {
+  padding: 0.75rem 0.5rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.dia-con-entreno {
+  background-color: #00ff6a !important;
+  color: #000 !important;
+  border-radius: 50% !important;
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.preview {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #444;
+  border-radius: 12px;
+  color: #000;
+}
+
+.preview h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.preview-marca {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #00ff6a;
+}
+

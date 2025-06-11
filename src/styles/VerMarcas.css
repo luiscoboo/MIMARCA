@@ -1,0 +1,209 @@
+/* VerMarcas.css */
+
+body {
+  background-color: #d9d9d9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  font-family: 'Anton', sans-serif;
+}
+
+.buscador-fecha {
+  display: block; /* ✅ No flex */
+  margin: 0 auto 2rem;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.05rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.buscador-fecha:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.3);
+}
+
+.dia-section {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 700px;
+  transition: box-shadow 0.2s ease;
+}
+
+.dia-section:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dia-btn {
+  width: 100%;
+  background-color: transparent;
+  color: #111827;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.dia-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.dia-btn::after {
+  content: '▼';
+  font-size: 0.8rem;
+  color: #9ca3af;
+  transition: transform 0.3s ease;
+}
+
+.dia-section.open .dia-btn::after {
+  transform: rotate(-180deg);
+}
+
+.ejercicios-container {
+  padding: 1rem 1.5rem;
+  background-color: #fefefe;
+}
+
+.ejercicio-section {
+  margin-bottom: 1rem;
+}
+
+.ejercicio-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.4rem;
+  border-left: 4px solid #fb923c;
+  padding-left: 0.5rem;
+}
+
+.ejercicio-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ejercicio-table th,
+.ejercicio-table td {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ejercicio-table th {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.ejercicio-table td {
+  color: #374151;
+}
+
+.fallo-icon {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.btn-eliminar-dia {
+  margin-top: 1rem;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-eliminar-dia:hover {
+  background-color: #b91c1c;
+}
+
+.botones-dia {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-pdf-dia {
+  background-color: #000000;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  max-height: 70px;
+  margin-top: 20px;
+}
+
+.btn-pdf-dia:hover {
+  background-color: #151515;
+}
+
+
+.btn-ir-calendario {
+  background-color: #0cdc63;
+  color: #121212;
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+  padding: 0.7rem 1.5rem;
+  
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.7rem;
+
+}
+
+.btn-ir-calendario:hover {
+  background-color: transparent;
+  color: #000000;
+
+}
+
+
+.calendario-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
